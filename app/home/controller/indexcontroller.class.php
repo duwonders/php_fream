@@ -4,6 +4,7 @@ class indexController extends conF{
 		$this->display();
 	}
 	public function lalala(){
-		$this->display();
+		$db = $this->D();
+		var_dump($db->select_by_sql('select * from user'));
 	}
 }

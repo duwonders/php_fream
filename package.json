@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7"
+  }
+}

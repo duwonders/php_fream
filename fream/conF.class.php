@@ -8,4 +8,12 @@ class conF{
 		$test = new parser(array($viewFilePath), $action.'.php', true); //模板引擎生成缓存文件
 		require_once('./app/home/cache/'.$action.'.php');
 	}
+
+	public function D($host = 'localhost', $user = 'root', $password = '', $db_name='test'){
+		try{
+			return Mysql::get_instance($host, $user, $password, $db_name);
+		}catch(Exception $ex){
+			throw new Exception("数据链接字段有错", 1);
+		}
+	}
 }

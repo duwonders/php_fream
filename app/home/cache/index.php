@@ -5,6 +5,8 @@
 	<title>Document</title>
 </head>
 <body>
-	lalala
+	<?php for( $i = 0;$i < 2;$i++) {?>
+		梁神是个hmp
+	<?php }  ?>
 </body>
 </html>

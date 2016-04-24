@@ -30,7 +30,7 @@ class Mysql{
 //数据库链接的方法在构造函数中调用
 
 	public function __clone(){
-		trigger_error("clone is not allow");
+		trigger_error("出现未知错误");
 	}
 //防止克隆的方法
 
@@ -94,4 +94,3 @@ class Mysql{
 	}
 
 }
-$conn = Mysql::get_instance('localhost', 'root', '', 'test');

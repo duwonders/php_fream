@@ -48,11 +48,7 @@ class route{
 			$controller = $this->controller."Controller";	//拼接controller名字符串
 			$action = $this->action;          //凭借方法名字符串
 			$tempObj = new $controller();
-			try{
 				call_user_func_array(array($tempObj, $action), $this->request_config);//将参数数组给调用函数
-			}catch(Exception $ex){
-				throw new Exception("出现未知错误", 1);
-			}
 		}else{
 			throw new Exception("没有对应控制器", 1);
 			
