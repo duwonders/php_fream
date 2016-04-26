@@ -3,7 +3,7 @@
 	class parser {
 		private $file_arr;    //需要编译的模板文件列表
 		private $target_file;	//目标文件
-		private $file_content; 
+		private $file_content;
 		private $flag = false;
 		private $exp_js = '/<script[\s]+?src=[\'\"]([\s\S]+?)[\'\"]>[\s\S]*?<\/script>/';
 		function __construct ($file_arr, $target_file, $b_js = false) {//是否将外链js绑定进页面
@@ -11,7 +11,7 @@
 			if (!Cache_file::check_cache($file_arr,$target_file)) {  //检查缓存
 				$this->file_arr = $file_arr;
 				$this->join();	//凭借模板文件
-				if($b_js){	
+				if($b_js){
 					$this->join_js();  //拼接js文件
 				}
 				$this->replace();

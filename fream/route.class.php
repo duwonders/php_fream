@@ -45,15 +45,14 @@ class route{
 		$path = './app/'."$this->module".'/controller/'.$this->controller.'Controller.class.php';
 		if(file_exists($path)){
 			require_once($path);
-			$controller = $this->controller."Controller";	//拼接controller名字符串
+			$controller = $this->controller."Controller";
+				//拼接controller名字符串
 			$action = $this->action;          //凭借方法名字符串
 			$tempObj = new $controller();
-				call_user_func_array(array($tempObj, $action), $this->request_config);//将参数数组给调用函数
+			call_user_func_array(array($tempObj, $action), $this->request_config);//将参数数组给调用函数
 		}else{
 			throw new Exception("没有对应控制器", 1);
 			
 		}
-		
 	}
-	
 }

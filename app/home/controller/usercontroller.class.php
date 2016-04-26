@@ -1,7 +1,7 @@
 <?php
 class userController extends conF{
 	public function index($name, $pass){
-		$this->display();
+		echo $name.$pass;
 	}
 	public function lalala(){
 		echo 'lalala';

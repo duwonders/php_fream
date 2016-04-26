@@ -6,7 +6,8 @@
 </head>
 <body>
 	<?php for( $i = 0;$i < 2;$i++) {?>
-		梁神是个hmp
+		<div style="width: 100px; height: 100px;background: red;"></div>
 	<?php }  ?>
+	<script>console.log('我是js文件')</script>
 </body>
 </html>

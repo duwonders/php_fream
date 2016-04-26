@@ -1,5 +1,6 @@
 <?php
 class conF{
+	
 	public function display(){
 		$className = get_class($this);//获取当前控制器名
 		$relName = preg_replace('/Controller/', '', $className);
@@ -8,6 +9,7 @@ class conF{
 		$test = new parser(array($viewFilePath), $action.'.php', true); //模板引擎生成缓存文件
 		require_once('./app/home/cache/'.$action.'.php');
 	}
+
 
 	public function D($host = 'localhost', $user = 'root', $password = '', $db_name='test'){
 		try{
